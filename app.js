@@ -10,6 +10,8 @@ const helloRouter = require('./routes/hello');
 
 var app = express();
 
+console.log('Server start!!!!!!!!');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
