@@ -8,9 +8,9 @@
           <link rel='stylesheet' href='/stylesheets/style.css' />
           <script>
                 $(document).click(function() {
-                    $('#btn').click(function() {
-                        const n = $('#num').val();
-                        $.getJSON("/ajax?id=" + n, function(json) {
+                    $('#btn').click(function() {//btnボタンをクリックしたら発生する関数。id="btn"の部分だね。
+                        const n = $('#num').val();//ここで入力した数値を取得。nに代入。
+                        $.getJSON("/ajax?id=" + n, function(json) {//加えて、getJSONででデータを取得する。方法は、URLのクエリパラメータで数字を見て、その数値はajax.jsのファイルでリクエストqueryidでidの数値を取得してn番目のJSONデータを選択。
                             const msg = '<table>' +
                                 '<tr><th>名前</th>' +
                                 '<td>' + json.name + '</td></tr>' +
@@ -19,7 +19,7 @@
                                 '<tr><th>出身</th>' +
                                 '<td>' + json.from + '</td></tr>' +
                                 '</table>';
-                            $('#msg').html(msg);
+                            $('#msg').html(msg);//htmlに組み込めるように変形。
                         });
                     });
                 });
